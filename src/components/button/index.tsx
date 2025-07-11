@@ -6,7 +6,7 @@ type Props = React.ComponentProps<'button'> & {
 
 export function Button({ name, onClick }: Props) {
   return (
-    <button className={styles.container} onClick={onClick}>
+    <button className={styles.container} onClick={onClick} type="submit">
       <span>{name}</span>
     </button>
   )
