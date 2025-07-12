@@ -14,12 +14,18 @@ export function App() {
   }
 
   function handleRemove() {
-    setCount(count - 1)
+    if (count > 0) {
+      setCount(count - 1)
+    }
   }
 
   useEffect(() => {
-    console.log('oi!')
-  }, [])
+    console.log('O valor mudou: ', count)
+
+    if (count <= 0) {
+      console.log('O contador não pode ser menor que zero!')
+    }
+  }, [count])
 
   return (
     <div className={styles.container}>
