@@ -1,5 +1,6 @@
+/** biome-ignore-all lint/suspicious/noConsole: ignore */
 import './global.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import styles from './app.module.css'
 import { Button } from './components/button'
@@ -15,6 +16,10 @@ export function App() {
   function handleRemove() {
     setCount(count - 1)
   }
+
+  useEffect(() => {
+    console.log('oi!')
+  }, [])
 
   return (
     <div className={styles.container}>
